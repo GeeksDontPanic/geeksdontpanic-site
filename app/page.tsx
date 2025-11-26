@@ -38,11 +38,12 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-4">
             <Link
-              href="/drops"
+              href="/drops/current"
               className="px-6 py-3 rounded-full bg-zinc-100 text-black text-sm font-medium"
             >
               View current drop
             </Link>
+
             <Link
               href="/keyboards"
               className="px-6 py-3 rounded-full border border-zinc-700 text-sm text-zinc-200"
