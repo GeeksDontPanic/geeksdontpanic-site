@@ -1,57 +1,200 @@
-import Link from 'next/link'
+import Link from "next/link";
+
+const headingFont = {
+  fontFamily:
+    "Satoshi, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+};
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-zinc-100 flex flex-col">
-      {/* Simple top nav */}
-      <header className="w-full border-b border-zinc-800">
-        <nav className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-          <span className="text-sm uppercase tracking-[0.2em] text-zinc-400">
-            Geeks Dont Panic
+    <main className="min-h-screen text-[#f4f4f2] bg-[#111111]">
+      {/* TOP BAR */}
+      <header className="border-b border-[#262626]">
+        <div className="max-w-5xl mx-auto flex items-center justify-between px-4 py-3 text-xs">
+          <span className="tracking-[0.18em] uppercase text-[#c4c4c4]">
+            geeks dont panic
           </span>
-          <div className="flex gap-4 text-sm">
-            <Link href="/keyboards" className="text-zinc-400 hover:text-zinc-100">
-              Keyboards
-            </Link>
-            <Link href="/drops" className="text-zinc-400 hover:text-zinc-100">
-              Drops
-            </Link>
-          </div>
-        </nav>
-      </header>
-
-      {/* Hero */}
-      <section className="flex-1 flex items-center justify-center px-4">
-        <div className="max-w-2xl text-center space-y-6">
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
-            <span className="block">Geeks Dont Panic</span>
-            <span className="block text-zinc-400 text-lg md:text-2xl mt-2">
-              Experimental hardware. Custom mechanical keyboards. Limited drops.
-            </span>
-          </h1>
-
-          <p className="text-zinc-400">
-            Small batch releases and one-off builds for people who like their gear
-            a little too much. Each drop comes with a digital card pack you can rip
-            open to reveal lore, variants, and surprises.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-4">
-            <Link
-              href="/drops"
-              className="px-6 py-3 rounded-full bg-zinc-100 text-black text-sm font-medium"
+          <div className="flex items-center gap-4">
+            <a
+              href="#work"
+              className="border-b border-transparent pb-0.5 transition-all duration-150 hover:border-[#f97316] hover:text-white"
             >
-              View current drop
-            </Link>
-            <Link
-              href="/keyboards"
-              className="px-6 py-3 rounded-full border border-zinc-700 text-sm text-zinc-200"
+              work
+            </a>
+            <a
+              href="#about"
+              className="border-b border-transparent pb-0.5 transition-all duration-150 hover:border-[#f97316] hover:text-white"
             >
-              Keyboard archive
-            </Link>
+              about
+            </a>
+            <a
+              href="mailto:chris@geeksdontpanic.com"
+              className="px-3 py-1.5 rounded-full border border-[#3a3a3a] text-[11px] transition-all duration-150 hover:border-[#f97316] hover:text-[#f97316]"
+            >
+              contact
+            </a>
           </div>
         </div>
-      </section>
+      </header>
+
+      <div className="max-w-5xl mx-auto px-4 py-10 space-y-12">
+        {/* HERO */}
+        <section className="space-y-6 pt-32 pb-32 hero-fade-up">
+          <h1
+            style={headingFont}
+            className="text-3xl md:text-4xl leading-tight text-center"
+          >
+            GEEKS DONT PANIC
+          </h1>
+
+          <p className="text-sm max-w-xl text-[#d4d4d4] text-center mx-auto">
+            crafting the intersection of digital elegance and tangible
+            innovation, my work melds artistry with functionality. explore a
+            curated blend of custom tech and visual storytelling.
+          </p>
+        </section>
+
+        {/* FEATURED PROJECT – CEMENT NUMBERPAD */}
+        <section className="space-y-3 section-fade-up">
+          <p className="text-xs text-[#a3a3a3]">next drop</p>
+
+          <h2 className="text-2xl leading-snug" style={headingFont}>
+            brutalist hardware, calm typing experience.
+          </h2>
+
+          <p className="text-sm max-w-xl text-[#d4d4d4]">
+            i design dune-inspired, brutalist objects, custom keyboards, and
+            small digital tools. this space is a quiet index of what i&apos;m
+            building — not a light show.
+          </p>
+
+          <Link
+            href="/numberpad"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#f97316] text-xs uppercase tracking-[0.16em] transition-all duration-200 hover:bg-[#f97316] hover:text-black hover:shadow-[0_0_25px_rgba(249,115,22,0.25)]"
+          >
+            view numberpad
+            <span className="text-[13px]">↗</span>
+          </Link>
+        </section>
+
+        <hr className="border-[#262626]" />
+
+        {/* CURRENT FOCUS */}
+        <section id="about" className="space-y-4 section-fade-up">
+          <p className="text-xs text-[#a3a3a3]">current focus</p>
+
+          <ul className="text-sm space-y-1">
+            <li>– cement + metal keyboards with brutalist forms</li>
+            <li>– sports tech experiments and cage concepts</li>
+            <li>– small-run, story-driven hardware drops</li>
+          </ul>
+        </section>
+
+        <hr className="border-[#262626]" />
+
+        {/* PROJECT INDEX */}
+        <section id="work" className="space-y-4 section-fade-up">
+          <p className="text-xs text-[#a3a3a3]">selected surfaces</p>
+
+          <div className="grid md:grid-cols-2 gap-6 text-sm">
+            <div className="border border-[#262626] rounded-xl p-4 space-y-2 bg-transparent transition-all duration-200 transform hover:-translate-y-0.5 hover:border-[#f97316] hover:bg-[#151515]">
+              <p className="text-[11px] uppercase tracking-[0.16em] text-[#a3a3a3]">
+                keyboards
+              </p>
+              <p className="text-sm">cement + metal keyboard series.</p>
+              <p className="text-xs text-[#a3a3a3]">
+                dune-like brutalist cases, sci-fi silhouettes, tuned acoustics.
+              </p>
+              <Link
+                href="/keyboards"
+                className="inline-flex items-center gap-1 text-xs mt-1 hover:text-[#f97316] transition-colors"
+              >
+                view collection <span className="text-[13px]">↗</span>
+              </Link>
+            </div>
+
+            <div className="border border-[#262626] rounded-xl p-4 space-y-2 bg-transparent transition-all duration-200 transform hover:-translate-y-0.5 hover:border-[#f97316] hover:bg-[#151515]">
+              <p className="text-[11px] uppercase tracking-[0.16em] text-[#a3a3a3]">
+                sports tech
+              </p>
+              <p className="text-sm">batting cages + training tools.</p>
+              <p className="text-xs text-[#a3a3a3]">
+                tech-heavy spaces for hitters and pitchers with clean visual
+                systems.
+              </p>
+              <Link
+                href="/drops"
+                className="inline-flex items-center gap-1 text-xs mt-1 hover:text-[#f97316] transition-colors"
+              >
+                view concepts <span className="text-[13px]">↗</span>
+              </Link>
+            </div>
+
+            <div className="border border-[#262626] rounded-xl p-4 space-y-2 bg-transparent transition-all duration-200 transform hover:-translate-y-0.5 hover:border-[#f97316] hover:bg-[#151515]">
+              <p className="text-[11px] uppercase tracking-[0.16em] text-[#a3a3a3]">
+                film &amp; image
+              </p>
+              <p className="text-sm">commercial, sports, and food work.</p>
+              <p className="text-xs text-[#a3a3a3]">
+                directing, dp, and edit work with a grounded, cinematic feel.
+              </p>
+              <a
+                href="#"
+                className="inline-flex items-center gap-1 text-xs mt-1 hover:text-[#f97316] transition-colors"
+              >
+                reel (soon) <span className="text-[13px]">↗</span>
+              </a>
+            </div>
+
+            <div className="border border-[#262626] rounded-xl p-4 space-y-2 bg-transparent transition-all duration-200 transform hover:-translate-y-0.5 hover:border-[#f97316] hover:bg-[#151515]">
+              <p className="text-[11px] uppercase tracking-[0.16em] text-[#a3a3a3]">
+                lab
+              </p>
+              <p className="text-sm">one-off experiments.</p>
+              <p className="text-xs text-[#a3a3a3]">
+                small utilities, prototypes, and ideas that don&apos;t have a
+                home yet.
+              </p>
+              <Link
+                href="/lab"
+                className="inline-flex items-center gap-1 text-xs mt-1 hover:text-[#f97316] transition-colors"
+              >
+                enter lab <span className="text-[13px]">↗</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* YOUTUBE FEATURE */}
+          <section className="space-y-4 pt-10 section-fade-up">
+            <p className="text-xs text-[#a3a3a3]">video work</p>
+
+            <div className="border border-[#262626] rounded-xl p-4 space-y-2">
+              <p className="text-[11px] uppercase tracking-[0.16em] text-[#a3a3a3]">
+                featured video
+              </p>
+              <p className="text-sm">retro-future hardware visuals &amp; process.</p>
+
+              <div className="aspect-video w-full bg-black rounded-md flex items-center justify-center text-[#555]">
+                youtube embed goes here
+              </div>
+
+              <a
+                href="https://youtube.com"
+                className="inline-flex items-center gap-1 text-xs mt-2 hover:text-[#f97316] transition-colors"
+              >
+                visit channel <span className="text-[13px]">↗</span>
+              </a>
+            </div>
+          </section>
+        </section>
+
+        <hr className="border-[#262626]" />
+
+        {/* FOOTER */}
+        <footer className="text-xs text-[#777] py-6">
+          <p>2024 – geeks dont panic. built in motion.</p>
+        </footer>
+      </div>
     </main>
-  )
+  );
 }
