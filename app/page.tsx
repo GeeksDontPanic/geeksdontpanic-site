@@ -9,33 +9,39 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col bg-[#050507] text-zinc-50">
       {/* NAV */}
-      <header className="w-full border-b border-zinc-900 bg-[#050507]/95 backdrop-blur-md sticky top-0 z-20">
-        <nav className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="h-7 w-7 rounded-md border border-[#f25b3f]/60 bg-[#2b1510] flex items-center justify-center text-[9px] tracking-[0.18em] text-[#f78b60] font-semibold">
-              GDP
-            </div>
-            <span className="text-[11px] uppercase tracking-[0.22em] text-zinc-400">
-              Geeks Dont Panic
-            </span>
-          </Link>
+<header className="w-full border-b border-zinc-900 bg-[#050507]/95 backdrop-blur-md sticky top-0 z-20">
+  <nav className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
+    <Link href="/" className="flex items-center gap-2">
+      <div className="h-7 w-7 rounded-md border border-[#f25b3f]/60 bg-[#2b1510] flex items-center justify-center text-[9px] tracking-[0.18em] text-[#f78b60] font-semibold">
+        GDP
+      </div>
+      <span className="text-[11px] uppercase tracking-[0.22em] text-zinc-400">
+        Geeks Dont Panic
+      </span>
+    </Link>
 
-          <div className="hidden sm:flex items-center gap-6 text-sm">
-            <a href="#about" className="text-zinc-400 hover:text-zinc-100">
-              About
-            </a>
-            <a href="#expertise" className="text-zinc-400 hover:text-zinc-100">
-              Expertise
-            </a>
-            <a href="#work" className="text-zinc-400 hover:text-zinc-100">
-              Work
-            </a>
-            <a href="#contact" className="text-zinc-400 hover:text-zinc-100">
-              Contact
-            </a>
-          </div>
-        </nav>
-      </header>
+    <div className="hidden sm:flex items-center gap-6 text-sm">
+      <Link href="/current-drop" className="text-zinc-400 hover:text-zinc-100">
+        Current Drop
+      </Link>
+      <Link href="/archive" className="text-zinc-400 hover:text-zinc-100">
+        Archive
+      </Link>
+      <Link href="/timeline" className="text-zinc-400 hover:text-zinc-100">
+        Timeline
+      </Link>
+      <Link href="/lab" className="text-zinc-400 hover:text-zinc-100">
+        Lab
+      </Link>
+      <Link href="/about" className="text-zinc-400 hover:text-zinc-100">
+        About
+      </Link>
+      <Link href="/contact" className="text-zinc-400 hover:text-zinc-100">
+        Contact
+      </Link>
+    </div>
+  </nav>
+</header>
 
       {/* HERO SURFACE */}
 <section className="w-full bg-white pt-6 pb-20">
@@ -43,32 +49,30 @@ export default function Home() {
   <div className="max-w-[1400px] mx-auto bg-[#0f0f0f] rounded-[40px] px-6 md:px-12 py-20">
 
     {/* HERO TEXT */}
-    <div className="max-w-3xl mx-auto text-center space-y-6">
+    <div className="max-w-xl mx-auto text-center space-y-8">
       <h1
-        style={{
-          fontFamily:
-            "Satoshi, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-        }}
-        className="text-[38px] md:text-[52px] font-semibold leading-tight text-white"
-      >
-        Multi-Niche Artist<br />and Designer
-      </h1>
+  style={{
+    fontFamily:
+      '"GDPHero", Satoshi, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+  }}
+  className="w-full max-w-3xl mx-auto text-[60px] md:text-[100px] font-normal leading-tight text-white block"
+>
+  geeks dont panic
+</h1>
 
-      <p className="text-zinc-300 text-[15px] max-w-xl mx-auto leading-relaxed">
-        Crafting the intersection of digital elegance and tangible innovation,
-        my work melds artistry with functionality. Explore a curated blend of
-        3D designs, custom tech, and visual storytelling.
+      <p className="text-zinc-300 text-[15px] mx-auto leading-relaxed">
+        Multi‑niche artist and designer crafting the intersection of digital elegance and tangible innovation. My work blends physical craft and visual storytelling — from custom hardware and cement keyboards to cinematic content and sports‑tech concepts.
       </p>
 
-      {/* CONTACT BUTTON */}
+      {/* CURRENT DROP BUTTON */}
 <div className="pt-2">
   <a
-    href="#contact"
+    href="/current-drop"
     className="group relative inline-flex items-center px-7 py-3.5 rounded-full bg-[#ff5e36] text-white text-[15px] font-medium tracking-[0.18em] uppercase overflow-hidden transition-colors"
   >
     {/* Text */}
     <span className="relative z-10 transition-colors duration-100 group-hover:text-[#ff5e36]">
-      Contact Me
+      Current Drop
     </span>
 
     {/* White oval with mass and bounce */}
@@ -141,32 +145,63 @@ export default function Home() {
 
 
 
-      {/* ABOUT */}
+            {/* ABOUT — NEW STYLE */}
       <section
         id="about"
-        className="w-full border-b border-zinc-900 bg-[#08080a] py-16 md:py-20"
+        className="w-full bg-[#08080a] py-20 border-b border-zinc-900"
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 grid gap-10 md:grid-cols-[minmax(0,1.2fr),minmax(0,1fr)] items-start">
-          <div className="space-y-4">
-            <p className="text-xs tracking-[0.28em] uppercase text-zinc-500">
-              ABOUT ME
-            </p>
-            <h2
-              style={headingFont}
-              className="text-xl md:text-2xl font-semibold text-zinc-50"
-            >
-              Hello, I&apos;m Chris — where digital meets physical.
-            </h2>
-            <p className="text-sm md:text-[15px] text-zinc-300 leading-relaxed">
-              I specialize in 3D design, custom tech, keyboards, and
-              photography. My work lives where aesthetics and utility intersect:
-              from concept hardware and product visuals to cinematic storytelling
-              and tactile experiences.
-            </p>
+        <div className="max-w-5xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center gap-12">
+          {/* PHOTO */}
+          <div className="flex-shrink-0 group [perspective:1200px]">
+            <img
+              src="/images/selfportrait.png"
+              alt="Self Portrait"
+              className="w-[200px] h-[200px] rounded-full object-cover border border-zinc-800 shadow-[0_20px_45px_rgba(0,0,0,0.6)] transition-transform duration-500 ease-out group-hover:-translate-y-1 group-hover:rotate-[2deg] group-hover:scale-[1.03]"
+            />
           </div>
 
-          <div className="h-[220px] md:h-[260px] rounded-3xl border border-zinc-800 bg-[#0b0b0d] flex items-center justify-center text-sm text-zinc-500">
-            Portrait or studio shot here.
+          {/* TEXT */}
+          <div className="space-y-4 max-w-xl">
+            <p className="text-xs tracking-[0.28em] uppercase text-zinc-500">
+              About Me
+            </p>
+
+            <h2
+              style={headingFont}
+              className="text-2xl md:text-3xl font-semibold text-zinc-50 leading-tight"
+            >
+              Hi, I&apos;m Chris — an artist exploring physical and digital.
+            </h2>
+
+            <div className="pt-2">
+              <a
+                href="/about"
+                className="group relative inline-flex items-center px-7 py-3.5 rounded-full bg-[#ff5e36] text-white text-[15px] font-medium tracking-[0.18em] uppercase overflow-hidden transition-colors"
+              >
+                <span className="relative z-10 transition-colors duration-100 group-hover:text-[#ff5e36]">
+                  About Me
+                </span>
+
+                <span
+                  className="
+                    absolute right-3 top-1/2 -translate-y-1/2 
+                    h-8 w-8 rounded-full bg-white 
+                    origin-right
+                    transition-[width,transform] 
+                    duration-500 
+                    ease-[cubic-bezier(.25,1.4,.3,1)]
+                    translate-x-[0px] scale-x-[0.96]
+                    group-hover:w-[calc(100%-2.2rem)]
+                    group-hover:translate-x-[-0px]
+                    group-hover:scale-x-[1.06]
+                  "
+                />
+
+                <span className="relative z-10 text-[#ff5e36] text-lg translate-x-[14px]">
+                  →
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
