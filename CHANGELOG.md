@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.11.1] — 2025-12-02
+### Fixed
+- Added missing Vercel Analytics integration in `layout.tsx`.
+- Resolved production build failure caused by missing environment variables.
+
 ## [0.11.0] — 2025-12-02
 ### Added
 - Implemented Supabase integration for email signup collection.
