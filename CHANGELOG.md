@@ -1,4 +1,27 @@
-# Changelog
+## [0.12.0] — 2025-12-04
+### Added
+- Implemented full Lore/Ticker system with JSON‑driven entries.
+- Added `ticker.json` and `lore.json` datasets for narrative integration.
+- Created `Ticker.tsx` terminal‑style UI component with typing animation, anomaly indicators, and header formatting.
+- Added global layout injection of the Ticker into `layout.tsx`.
+
+### Changed
+- Updated ticker visuals: wider terminal window, multiline residue formatting, internal entry headers, hard‑blink cursor, and faster typing effect.
+- Adjusted overall styling for consistency with site’s brutalist theme.
+
+### Fixed
+- Resolved import path issues between `Ticker.tsx`, `ticker.ts`, and `ticker.json`.
+- Fixed JSON parsing errors causing local preview to crash.
+- Corrected alias path for component loading inside `layout.tsx`.
+
+## [0.11.2] — 2025-12-02
+### Fixed
+- Updated Next.js route handler for `/api/subscribe` to use the correct file structure (`route.js` inside `/api/subscribe/`).
+- Resolved deployment errors caused by mismatched file structure after Supabase integration migration.
+- Confirmed static asset and client/server boundary alignment for the email signup system.
+
+### Notes
+- No UI changes made; this version strictly ensures stable production deployment.
 
 ## [0.11.1] — 2025-12-02
 ### Fixed

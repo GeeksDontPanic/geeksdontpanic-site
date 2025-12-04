@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "entryId": 1,
+      "label": "ENTRY 0001",
+      "hasAnomaly": false,
+      "text": "Shift initiated. Diagnostics nominal. Empty bandwidth, full archive.",
+      "residue": ">> channel: open | checksum: 0x9912FFE1 | drift: +0.0003"
+    },
+    {
+      "id": 2,
+      "entryId": 2,
+      "label": "ENTRY 0002",
+      "hasAnomaly": true,
+      "text": "Band-7 registered a clean spike just above the noise floor. Logged as low-priority anomaly.",
+      "residue": ">> channel: open | checksum: 0x9912FFE1 | drift: +0.0021"
+    },
+    {
+      "id": 3,
+      "entryId": 3,
+      "label": "ENTRY 0003",
+      "hasAnomaly": false,
+      "text": "Archive consolidation complete. Auto-summaries growing more verbose, like the system is clearing its throat.",
+      "residue": ">> channel: open | checksum: 0x9912FFE2 | drift: +0.0014"
+    },
+    {
+      "id": 4,
+      "entryId": 4,
+      "label": "ENTRY 0004",
+      "hasAnomaly": true,
+      "text": "Storage cradle 4 pinged during rest phase. Localized impulse matches prior Band-7 deviation profile.",
+      "residue": ">> channel: open | checksum: 0x9912FFEA | drift: +0.0038"
+    }
+  ]
+}

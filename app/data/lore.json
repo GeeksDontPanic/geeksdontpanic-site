@@ -1,0 +1,60 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "entryLabel": "ENTRY 0001",
+      "timestamp": "Station Time // 141.03.17",
+      "phase": "A",
+      "hasAnomaly": false,
+      "primaryLog": "Start of shift logged.\n\nRan standard diagnostics on outer hull sensors and relay antennas. Response curves match last week's baselines within tolerance. Nothing in the queue from Command, which means another cycle of maintenance, archive reconciliation, and listening to a lot of empty bandwidth.\n\nSometimes I wonder if anyone ever reads these logs, but the station doesn't much care either way. As long as the numbers stay inside their boxes, it calls that 'nominal.'\n\nFiled minor note on the aging scrubber arrays in Sector C; they'll keep working, but they sound tired. Then again, so do I.",
+      "systemResponse": null,
+      "residue": {
+        "channel": "open",
+        "checksum": "0x9912FFE1",
+        "drift": "+0.0003"
+      }
+    },
+    {
+      "id": 2,
+      "entryLabel": "ENTRY 0002",
+      "timestamp": "Station Time // 141.07.22",
+      "phase": "A",
+      "hasAnomaly": true,
+      "primaryLog": "Mid-cycle recalibration on the external field monitors returned a slight spike on Band-7.\n\nThe amplitude was small, barely above the noise floor, but the shape of it was clean—too clean. A narrow ridge, like something stepped briefly into view and then stepped back out.\n\nChecked the logs from the last ten cycles: nothing similar. Logged it as a low-priority anomaly and flagged it for trend tracking. If it repeats, it might be a system quirk. If it doesn't, it will just sit here as another orphaned line item in the archive.",
+      "systemResponse": "[ANALYSIS] Band-7 deviation recorded.\n>> classification: non-critical\n>> recurrence: 0 of 120 prior cycles\n>> recommendation: continue monitoring",
+      "residue": {
+        "channel": "open",
+        "checksum": "0x9912FFE1",
+        "drift": "+0.0021"
+      }
+    },
+    {
+      "id": 3,
+      "entryLabel": "ENTRY 0003",
+      "timestamp": "Station Time // 141.11.03",
+      "phase": "B",
+      "hasAnomaly": false,
+      "primaryLog": "Spent most of this span reconciling archive indices—the kind of work that makes you grateful the station handles the heavy lifting.\n\nAutomated summaries have been more verbose lately. Extra lines in the tail output, minor formatting quirks. Nothing the spec sheets complain about, so it's probably just a software revision no one bothered to document.\n\nStill, it's strange when a machine you've been staring at for months starts to 'clear its throat' differently. You notice, even if you pretend not to.",
+      "systemResponse": "[SYSTEM] Archive consolidation complete.\n>> collisions: 0\n>> orphaned records: 3 (re-anchored)",
+      "residue": {
+        "channel": "open",
+        "checksum": "0x9912FFE2",
+        "drift": "+0.0014"
+      }
+    },
+    {
+      "id": 4,
+      "entryLabel": "ENTRY 0004",
+      "timestamp": "Station Time // 141.14.29",
+      "phase": "B",
+      "hasAnomaly": true,
+      "primaryLog": "Storage cradle 4 pinged during rest phase. No scheduled movement, no external triggers, but the sensors registered a localized impulse—short, contained, centered on the inert sample we logged last cycle.\n\nOn replay, the waveform lines up uncomfortably close to the Band-7 spike from before. The amplitudes differ, but the profile is almost a match.\n\nI ran the comparison twice to be sure. The station tagged it as 'within operational tolerance' and tried to close the ticket.\n\nI reopened it.",
+      "systemResponse": "[CORRELATION] Event-4C compared to Band-7 deviation.\n>> similarity-index: 0.87\n>> risk-profile: low\n>> note: no update to threat model required",
+      "residue": {
+        "channel": "open",
+        "checksum": "0x9912FFEA",
+        "drift": "+0.0038"
+      }
+    }
+  ]
+}
