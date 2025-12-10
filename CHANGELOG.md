@@ -1,3 +1,12 @@
+## [0.12.1] — 2025-12-10
+### Added
+- Added Claude Code project documentation (CLAUDE.md) with tech stack, coding standards, and design philosophy.
+- Added `.claudeignore` configuration file.
+- Added `app/lore/` directory structure for narrative content organization.
+
+### Notes
+- Safety commit before restoring full modern homepage from coming-soon state.
+
 ## [0.12.0] — 2025-12-04
 ### Added
 - Implemented full Lore/Ticker system with JSON‑driven entries.
